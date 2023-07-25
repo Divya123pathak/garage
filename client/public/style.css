@@ -1,0 +1,568 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+  --yellow: #f9d806;
+  --light-yellow: #ffee80;
+  --black: #130f40;
+  --light-color: #666;
+  --border: .1rem solid rgba(0, 0, 0, .1);
+  --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+h2 {
+  color: black;
+  font-size: 2.5rem;
+  margin-top: -56rem; /* Adjust the margin-top value as needed */
+  margin-bottom: 0;
+  margin-left: 67rem;
+  margin-right:-18rem;
+  text-align:center;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+}
+.header {
+  margin-left: 20px;
+}
+
+#history-button {
+  margin-right: auto;
+}
+.navbar a:not(#history-button):not(.logo) {
+  margin-right: 10px;
+}
+
+#menu-btn {
+  margin-right: 10px;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+form {
+  margin-top: 2rem;
+  text-align: center;
+
+border:2px solid green;
+
+ 
+}
+
+input[type="text"],
+input[type="password"] {
+  margin-right:67rem;
+  margin-top: 1rem;
+  border-radius: .5rem;
+  background: var(--light-yellow);
+  color: var(--black);
+  font-weight: 500;
+  font-size: 1.7rem;
+  padding: .8rem 1rem;
+  border: var(--border);
+}
+#name{
+  padding:14px 13px 11px 13px;
+  margin-bottom: 2rem; 
+}
+#password{
+  padding:14px 13px 11px 13px;
+}
+#make-account img {
+  width: 54px; /* Adjust the width as needed */
+ height: 49px; /* Adjust the height as needed */
+ margin-right: 8px; /* Add some margin between the icon and the text */
+}
+#make-account span {
+  position: relative;
+  text-align:center;
+  z-index: 1;
+}
+
+
+
+
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+#make-account {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  margin-right:68rem;
+  color:black;
+  margin-bottom: 4rem;
+ 
+  
+}
+
+
+
+#error-message {
+  color: red;
+  margin-top: 1rem;
+}
+
+#main-submit {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-right:69rem;
+  border-radius: .5rem;
+  background: var(--light-yellow);
+  color: var(--black);
+  font-weight: 500;
+  font-size: 1.7rem;
+  cursor: pointer;
+  padding: .8rem 3rem;
+  transition: background-color 0.2s ease;
+}
+
+#main-submit:hover {
+  background-color: var(--yellow);
+}
+
+
+
+a {
+  color: var(--black);
+  font-size: 1.7rem;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--yellow);
+}
+
+.error-message {
+  color: var(--black);
+  font-size: 1.6rem;
+}
+
+
+body {
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.signup-link {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: var(--light-color);
+}
+
+.signup-link a {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+
+
+section {
+  padding: 12rem 9% 2rem;
+}
+
+#s3 {
+  color: var(--yellow);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: .5rem;
+  background: var(--light-yellow);
+  color: var(--black);
+  font-weight: 500;
+  font-size: 1.7rem;
+  cursor: pointer;
+  padding: .8rem 3rem;
+}
+
+.btn:hover {
+  background: var(--yellow);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 9%;
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  color: var(--black);
+  font-weight: bolder;
+
+}
+
+.header .logo #s1 {
+  color: var(--yellow);
+ 
+}
+
+.header .logo #s2 {
+  font-size: 1.2rem;
+}
+
+.header .navbar a {
+  font-size: 1.7rem;
+  margin: 0 1rem;
+  color: var(--black);
+}
+
+.header .navbar a:hover {
+  color: var(--yellow);
+}
+
+.header .btn {
+  margin-top: 0;
+}
+
+.header #login-btn i {
+  font-size: 2.5rem;
+  color: var(--light-color);
+  cursor: pointer;
+  display: none;
+}
+
+#menu-btn {
+  font-size: 2.5rem;
+  color: var(--light-color);
+  cursor: pointer;
+  display: none;
+}
+
+.header.active {
+  box-shadow: var(--box-shadow);
+  padding: 12rem 9%; 
+}
+
+.login-form-container {
+  position: fixed;
+  top: -105%;
+  left: 0;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, .9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.login-form-container.active {
+  top: 0;
+  opacity: 1;
+}
+
+.login-form-container form {
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: .5rem;
+  box-shadow: var(--box-shadow);
+  background: #fff;
+  border: var(--border);
+  text-align: center;
+  width: 40rem;
+}
+
+.login-form-container form .btn {
+  display: block;
+  width: 100%;
+  margin: .5rem 0;
+}
+
+.login-form-container form h3 {
+  color: var(--black);
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.login-form-container form .box {
+  margin: .7rem 0;
+  width: 100%;
+  text-transform: none;
+  color: var(--black);
+  font-size: 1.6rem;
+  padding: 1rem 1.2rem;
+  border: var(--border);
+  border-radius: .5rem;
+}
+
+.login-form-container #close-login-form {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  font-size: 5rem;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.home {
+  margin: auto;
+  width: 100%;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  background-image: url(img/img/john-paulsen-MJeyFglfq9E-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-top: 8rem;
+}
+
+.home h1 {
+  font-size: 4.5vw;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.home img {
+  width: 85%;
+  margin: 1rem 0;
+}
+
+.contact {
+  padding: 12rem 9%;
+}
+
+
+
+.contact-text {
+  text-align: center;
+}
+
+.contact-text h1 {
+  font-size: 3.5rem;
+  color: var(--black);
+}
+
+.contact-text p {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  color: var(--light-color);
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin: 2rem;
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.info i {
+  margin-right: 1rem;
+}
+
+.contact-form {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.contact-form .box {
+  margin: 1.5rem 0;
+  width: 100%;
+  text-transform: none;
+  color: var(--black);
+  font-size: 1.6rem;
+  padding: 1rem 1.2rem;
+  border: var(--border);
+  border-radius: .5rem;
+}
+
+.contact-form textarea {
+  height: 10rem;
+}
+
+.services .services-text {
+    text-align: center;
+    color: var(--black);
+  }
+  
+  .services .services-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .services .services-text p {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .services .services-list {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+  
+  .services .service {
+    text-align: center;
+  }
+  
+  .services .service i {
+    font-size: 4rem;
+    color: var(--yellow);
+    margin-bottom: 1.5rem;
+  }
+  
+  .services .service h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .services .service p {
+    font-size: 1.8rem;
+  }
+  
+  .about {
+    padding: 12rem 9%;
+    text-align: center;
+    overflow: hidden; /* Add this line */
+  }
+  
+.about-text {
+  text-align: center;
+}
+
+.about-text h1 {
+  font-size: 3.5rem;
+  color: var(--black);
+}
+
+.about-text p {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  color: var(--light-color);
+}
+
+.about-details {
+  margin-top: 4rem;
+}
+
+.about-details h2 {
+  font-size: 2.8rem;
+  color: var(--black);
+  margin-top: 3rem;
+}
+
+.about-details p {
+  margin-top: 1.5rem;
+  font-size: 1.8rem;
+  color: var(--light-color);
+}
+
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 2rem;
+  }
+
+  .header.active {
+    padding: 2rem;
+  }
+
+  section {
+    padding: 12rem;
+  }
+  
+  
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: block;
+  }
+
+  #menu-btn.fa-times {
+    transform: rotate(180deg);
+  }
+
+  .header #login-btn i {
+    display: block;
+  }
+
+  .header #login-btn .btn {
+    display: none;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: var(--border);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .header .navbar a {
+    display: block;
+    margin: 2rem;
+    font-size: 2rem;
+  }
+  
+    
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+}

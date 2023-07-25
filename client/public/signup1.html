@@ -1,0 +1,48 @@
+
+     
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Sign up</h2>
+    <script src="style.css"></script>
+    
+        <form action="/signup" method="post"  onsubmit="return validateForm()">
+        <input type="text" name="name"id="name"  placeholder="Name">
+        <input type="password" name="password"  id="password"placeholder="Password">
+    
+    <br><br><br>
+        <div id="error-message" style="color: red;"></div>
+        <br><br><br>
+        <br><br>
+        <input type="submit" id="main-submit">
+      </form>  
+      <script>
+        function validateForm() {
+           const name = document.getElementById('name').value.trim();
+           const password = document.getElementById('password').value.trim();
+           const errorMessage = document.getElementById('error-message');
+     
+           if (name === '' || password === '') {
+             errorMessage.textContent = 'Enter valid email adreess';
+             return false; // Prevent form submission
+           }
+     
+           errorMessage.textContent = ''; // Clear error message
+           return true; // Allow form submission
+
+
+
+
+         }
+       </script> 
+</body>
+</html>
+
+     
+   

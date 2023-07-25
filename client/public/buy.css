@@ -1,0 +1,113 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+  --yellow: #f9d806;
+  --light-yellow: #ffee80;
+  --black: #130f40;
+  --light-color: #666;
+  --border: .1rem solid rgba(0, 0, 0, .1);
+  --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+.container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-container {
+  width: 45%;
+}
+
+form {
+  margin-top: 2rem;
+  text-align: center;
+  border: 2px solid green;
+}
+
+h2 {
+  color: var(--black);
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+label {
+  font-size: 1.7rem;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+input[type="checkbox"] {
+  margin-right: 1rem;
+}
+
+input[type="hidden"],
+input[type="submit"] {
+  display: block;
+  margin: 2rem auto;
+  border-radius: .5rem;
+  background: var(--light-yellow);
+  color: var(--black);
+  font-weight: 500;
+  font-size: 1.7rem;
+  cursor: pointer;
+  padding: .8rem 3rem;
+  transition: background-color 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--yellow);
+}
+
+input[type="text"] {
+  margin-right: 1rem;
+  margin-top: 1rem;
+  border-radius: .5rem;
+  background: var(--light-yellow);
+  color: var(--black);
+  font-weight: 500;
+  font-size: 0.7rem;
+  padding: .8rem 1rem;
+  border: var(--border);
+}
+
+.signup-link {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: var(--light-color);
+}
+
+.signup-link a {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.error-message {
+  color: var(--black);
+  font-size: 1.6rem;
+}
+
+body {
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}

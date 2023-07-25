@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GarageMan - About</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <a href="his.html" id="history-button">History</a>
+        <a href="#" class="logo"><span id="s1">Garage</span>Man <span id="s2">Ahmedabad</span></a>
+        <nav class="navbar">
+          <a href="index.html">Home</a>
+          <a href="contact.html">Contact</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="buy.html">Buy Services</a>
+         
+        </nav>
+        <div id="login-btn">
+          <a href="login1.html" class="btn" id="main-login">Login</a>
+          <i class="far fa-user" id="logout-icon" style="display: none;"></i>
+        </div>
+      </header>
+      <div class="login-form-container">
+        <span class="fas fa-times" id="close-login-form"></span>
+      <!--
+<form action="">
+  <h3>User Login</h3>
+  <br><br>
+  <input type="text" placeholder="Username" class="box" id="username">
+  <input type="password" placeholder="Password" class="box" id="password">
+  <br><br><br>
+  <input type="submit" value="Login Now" class="btn">
+  <br><br><br>
+  <div>Already an account</div>
+  <br><br>
+  <button>SignUp</button>
+</form>
+-->
+      </div>
+  <section class="about">
+    <div class="about-text">
+      <h1>About Us</h1>
+      <p>Learn more about our company and our commitment to providing top-notch car services.</p>
+    </div>
+    <div class="about-details">
+      <h2>Our History</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget sapien in nulla faucibus efficitur vitae sed justo. Sed vitae nunc ullamcorper, maximus sem sed, convallis nulla. Suspendisse potenti. Mauris iaculis placerat sapien, id tristique nisi sagittis at. Sed luctus fermentum quam, ac egestas tellus gravida ut. Sed pellentesque rhoncus nibh, a venenatis purus pellentesque a. Sed eget metus euismod, viverra ipsum sit amet, auctor quam. Nam ultrices neque vitae iaculis pulvinar.</p>
+      <h2>Our Team</h2>
+      <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus placerat dui id dapibus volutpat. Sed et lacus vitae ligula finibus commodo at et lacus. Nulla facilisi. Mauris tristique leo sed diam malesuada, id hendrerit sem euismod. Integer quis ante ut lorem venenatis finibus a at nisi. Aliquam convallis dictum mi eget elementum.</p>
+      <h2>Our Mission</h2>
+      <p>Nullam ac luctus sem. Morbi efficitur arcu sit amet urna commodo, sed pharetra enim dignissim. Ut et est eget lectus fringilla rutrum. Integer ut risus eleifend, sagittis dui id, consectetur orci. Maecenas elementum urna id pharetra bibendum. Suspendisse sollicitudin diam ac leo scelerisque, id auctor purus iaculis. Donec fringilla, tellus ac semper gravida, ex ex scelerisque metus, nec b</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script>
+    // Check if the "username" cookie exists
+    const username = getCookie('username');
+    const loginBtn = document.getElementById('main-login');
+    const logoutIcon = document.getElementById('logout-icon');
+      const usernameDisplay = document.getElementById('username');
+    if (username) {
+     // loginBtn.style.display = 'none';
+        //usernameDisplay.innerText = username;
+        logoutIcon.style.display = 'inline-block';
+      const loginBtn = document.getElementById('main-login');
+      loginBtn.innerText = username; // Replace the button value with the username
+    }
+    if (username) {
+        logoutIcon.style.visibility = 'visible';
+      }
+  
+    else{
+      logoutIcon.style.visibility = 'hidden';
+    }
+    
+
+
+  logoutIcon.addEventListener('click', () => {
+    document.cookie = 'username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+  loginBtn.innerText = 'Login'; 
+  });
+  //loginBtn.addEventListener('click', (event) => {
+    //  if (username) {
+   // event.preventDefault(); // Prevent the default click behavior
+  //} else {
+   // window.location.href = '/login1.html'; // Redirect to login1.html
+ // }
+//});
+ // });
+
+
+
+  
+      // Function to get the value of a cookie by name
+  function getCookie(name) {
+    const cookieName = name + "=";
+    const cookieArray = document.cookie.split(';');
+    for (let i = 0; i < cookieArray.length; i++) {
+      let cookie = cookieArray[i];
+      while (cookie.charAt(0) === ' ') {
+        cookie = cookie.substring(1);
+      }
+      if (cookie.indexOf(cookieName) === 0) {
+        return cookie.substring(cookieName.length, cookie.length);
+      }
+    }
+    return null;
+  }
+</script>
+</body>
+</html>

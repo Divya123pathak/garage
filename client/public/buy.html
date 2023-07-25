@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="buy.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Buy Services</h1>
+            <form action="/pay" method="post" >
+              
+                <label class="service-label">
+                    maintenance
+                    <input type="checkbox" name="services-availed[]" value="100">
+                    100
+                </label>
+                <br>
+                <label class="service-label">
+                    repair
+                    <input type="checkbox" name="services-availed[]" value="500">
+                    500
+                </label>
+                <br>
+                <label class="service-label">
+                   carwash
+                    <input type="checkbox" name="services-availed[]" value="200">
+                    200
+                </label>
+                <br>
+                <br>
+                <input type="hidden" id="total-amount-input" name="total-amount" value="0.00">
+                <input type="submit" value="Pay">
+            </form>
+        </div>
+        
+        <div class="form-container">
+            <form>
+                <h2>Total Amount</h2>
+                <label for="total-amount">
+                    <input type="text" id="total-amount" name="total-amount" readonly value="0.00">
+                </label>
+            </form>
+        </div>
+    </div>
+    <script src="script1.js"></script>
+   
+        
+       
+
+</body>
+</html>

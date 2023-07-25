@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmation</title>
+    <link rel="stylesheet" href="pay.css">
+
+</head>
+<body>
+   <div>
+      Thanks for shopping! The total amount paid is:
+      <span id="total-amount"></span>
+   </div>
+   
+   <script>
+      window.addEventListener('DOMContentLoaded', function() {
+         const urlParams = new URLSearchParams(window.location.search);
+         const totalAmount = urlParams.get('total-amount');
+         document.getElementById('total-amount').textContent = totalAmount;
+      });
+   </script>
+</body>
+</html>

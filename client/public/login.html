@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GarageMan</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div id="menu-btn" class="fas fa-bars"></div>
+    <a href="his.html" id="history-button">History</a>
+    <a href="#" class="logo"><span id="s1">Garage</span>Man <span id="s2">Ahmedabad</span></a>
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="contact.html">Contact</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="buy.html">Buy Services</a>
+     
+    </nav>
+    <div id="login-btn">
+      <a href="login1.html" class="btn" id="main-login" >Login</a>
+      <i class="far fa-user" id="logout-icon" style="display: none;"></i>
+    </div>
+  </header>
+
+  <script>
+    // Check if the "username" cookie exists
+    const username = getCookie('username');
+    const loginBtn = document.getElementById('main-login');
+    const logoutIcon = document.getElementById('logout-icon');
+      const usernameDisplay = document.getElementById('username');
+    if (username) {
+     // loginBtn.style.display = 'none';
+        //usernameDisplay.innerText = username;
+        logoutIcon.style.display = 'inline-block';
+      const loginBtn = document.getElementById('main-login');
+      loginBtn.innerText = username; // Replace the button value with the username
+    }
+    if (username) {
+        logoutIcon.style.visibility = 'visible';
+      }
+  
+    else{
+      logoutIcon.style.visibility = 'hidden';
+    }
+    
+
+
+  logoutIcon.addEventListener('click', () => {
+    document.cookie = 'username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+  loginBtn.innerText = 'Login'; 
+  });
+  //loginBtn.addEventListener('click', (event) => {
+    //  if (username) {
+   // event.preventDefault(); // Prevent the default click behavior
+  //} else {
+   // window.location.href = '/login1.html'; // Redirect to login1.html
+ // }
+//});
+ // });
+
+
+
+  
+      // Function to get the value of a cookie by name
+  function getCookie(name) {
+    const cookieName = name + "=";
+    const cookieArray = document.cookie.split(';');
+    for (let i = 0; i < cookieArray.length; i++) {
+      let cookie = cookieArray[i];
+      while (cookie.charAt(0) === ' ') {
+        cookie = cookie.substring(1);
+      }
+      if (cookie.indexOf(cookieName) === 0) {
+        return cookie.substring(cookieName.length, cookie.length);
+      }
+    }
+    return null;
+  }
+</script>
+</body>
+</html>

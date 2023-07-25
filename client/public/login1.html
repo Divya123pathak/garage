@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet"  href="style.css">
+
+</head>
+
+<body>
+ 
+  <h2 class="login-heading"> Login  </h2>
+  <form action="/submit" method="post"  onsubmit="return validateForm(event)">
+    <input type="text" name="name"id="name"  placeholder="Name">
+    <input type="password" name="password"  id="password"placeholder="Password">
+
+    <br><br><br>
+    <div id="error-message" style="color: red;"></div>
+    <br><br><br>
+    <br><br>
+    <br><br><br>
+    <a href="signup1.html" id="make-account"> <img src="data:image/png;base64,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"
+      alt="New Account Icon">MAKE A NEW ACCOUNT</a>
+    <input type="submit" id="main-submit">
+
+
+    
+  </form>
+  
+    <script>
+     
+      async  function validateForm(event) {
+        event.preventDefault();
+          const name = document.getElementById('name').value.trim();
+          const password = document.getElementById('password').value.trim();
+          const errorMessage = document.getElementById('error-message');
+          
+    if (name === '' || password === '') {
+     
+     errorMessage.textContent = 'Enter valid username and password';
+     setTimeout(() => {
+       errorMessage.textContent = ''; // Clear error message after 3 seconds
+      }, 3000);
+     return;
+    }
+      //const response = await fetch('/submit', {
+     //   method: 'POST',
+        //headers: {
+        //  'Content-Type': 'application/json'
+       // },
+      //  body: JSON.stringify({ name, password })
+     // });
+      //const data = await response.json();
+
+     // if (data.status === 'null') {
+      //  errorMessage.textContent = 'Enter valid username and password';
+      //  setTimeout(() => {
+        //  errorMessage.textContent = ''; // Clear error message after 3 seconds
+      //  }, 3000);
+     // } else if (data.status === 'exists') {
+      //  errorMessage.textContent = 'Already a user';
+       // setTimeout(() => {
+       //   errorMessage.textContent = ''; // Clear error message after 5 seconds
+     //   }, 5000);
+     // }
+             //const response = await fetch('/validate', {
+    //method: 'POST',
+    //headers: {
+     // 'Content-Type': 'application/json',
+    //},
+    //body: JSON.stringify({ name, password }),
+ // });
+
+ // const data = await response.json();
+
+  //if (data.exists) {
+   // errorMessage.textContent = 'Already a user';
+  //  setTimeout(() => {
+     // errorMessage.textContent = ''; // Clear error message after 5 seconds
+    //}, 5000);
+   // return;
+ // }
+   // if (name === '' || password === '') {
+         // event.preventDefault(); 
+         // errorMessage.textContent = 'Enter valid username and password';
+          //setTimeout(() => {
+          //errorMessage.textContent = ''; // Clear error message after 3 seconds
+      //  }, 3000);
+         // return false; // Prevent form submission
+       // }
+        //const response = await fetch('/validate', {
+      //method: 'POST',
+      //headers: {
+        //'Content-Type': 'application/json'
+      //},
+      //body: JSON.stringify({ name, password })
+//});
+event.target.submit();
+    //const data = await response.json();
+    //const status = new URLSearchParams(window.location.search).get('status'); // Get the 'status' value from the URL query parameter
+   
+    //if (status === 'null') {
+  //event.preventDefault();
+  //errorMessage.textContent = 'Enter valid username and password';
+  //setTimeout(() => {
+   // errorMessage.textContent = ''; // Clear error message after 5 seconds
+  //}, 3000);
+  //return;
+//}
+ //else if (status === 'exists') {
+ // event.preventDefault();
+ // errorMessage.textContent = 'Already a user';
+  //setTimeout(() => {
+  //  errorMessage.textContent = ''; // Clear error message after 10 seconds
+ // }, 30000);
+ //return;
+//}
+
+      // else {
+        //errorMessage.textContent = ''; // Clear error message
+      //}
+        //if (data.exists) {
+      //errorMessage.textContent = 'Already a user';
+      //setTimeout(() => {
+      // errorMessage.textContent = ''; // Clear error message after 5 seconds
+      //}, 5000);
+      //return false; // Prevent form submission
+    //}
+        
+  
+        // Allow form submission
+       // const response = await fetch('/validate', {
+      //method: 'POST',
+      //headers: {
+       // 'Content-Type': 'application/json'
+     // },
+      //body: JSON.stringify({ name, password })
+   // });
+    //const data = await response.json();
+
+   // if (data.exists) {
+      //errorMessage.textContent = 'Already a user'; // Display the "Already a user" message
+      //return false; // Prevent form submission
+    //}
+        //const response = await fetch('/validate', {
+ //method: 'POST',
+  //headers: {
+  // 'Content-Type': 'application/json'
+ // },
+//body: JSON.stringify({ name })
+//});
+
+//const data = await response.json();
+
+//if (data.exists) {
+ 
+  //userMessage.textContent = 'Already a user'; // Show the "Already a user" message
+  //return false; // Prevent form submission
+//}
+//userMessage.textContent = ''; // Hide the "Already a user" message
+//return true; // Allow form submission
+//errorMessage.textContent = ''; // Clear error message
+    //return true; // Allow form submission
+   
+
+    //  return true; // Allow form submission
+  }
+  
+ 
+
+   
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Transactions</title>
+</head>
+<body>
+  <div id="transactions-container"></div>
+
+  <script>
+    // Fetch transactions data from the server
+    fetch('/transactions')
+  .then(response => response.json())
+  .then(data => {
+    const transactionsContainer = document.getElementById('transactions-container');
+
+    if (data && data.length > 0) {
+      // Generate HTML content for each transaction
+      const transactionsHTML = data.map(transaction => {
+        const date = new Date(transaction.date).toLocaleDateString();
+        const totalAmount = transaction.totalAmount.toFixed(2);
+        const services = transaction.services.map(service => service.name).join(', ');
+
+        return `
+          <div>
+            <p>Date: ${date}</p>
+            <p>Total Amount: $${totalAmount}</p>
+            <p>Services: ${services}</p>
+          </div>
+        `;
+      }).join('');
+
+      // Append the transactions HTML to the container
+      transactionsContainer.innerHTML = transactionsHTML;
+    } else {
+      // No transactions found
+      transactionsContainer.innerHTML = '<p>No transactions available.</p>';
+    }
+  })
+  .catch(error => console.error(error));
+
+  </script>
+</body>
+</html>
